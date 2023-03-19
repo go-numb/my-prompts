@@ -40,3 +40,10 @@ func Map() map[string]Prompt {
 
 	return m
 }
+
+func (p *Prompt) Replace(user, assistant, n string) *Prompt {
+	p.Command = strings.ReplaceAll(p.Command, "[[user_name]]", user)
+	p.Command = strings.ReplaceAll(p.Command, "[[assistant_name]]", assistant)
+	p.Command = strings.ReplaceAll(p.Command, "[[n]]", n)
+	return p
+}
