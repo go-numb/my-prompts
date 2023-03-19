@@ -1,4 +1,4 @@
-module myprompts
+module github.com/go-numb/my-prompts
 
 go 1.20
 
